@@ -7,7 +7,7 @@ public class indexes {
 	public indexes() {
 		// TODO Auto-generated constructor stub
 		int tmp = 24345;
-		System.out.println(s_id_index(tmp));
+		System.out.println(s_id_index("2345"));
 		System.out.println(hdate_index("2018-10-01"));
 		System.out.println(firstname_index("SuSan"));
 	}
@@ -49,57 +49,58 @@ public class indexes {
 	}
 	
 	
-	public int s_id_index(int s_id) {
+	public int s_id_index(String s_id) {
 		int[] arr = { 80, 3, 15, 2, 37 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int ssid_index(int s_id) {
+	public int ssid_index(String s_id) {
 		int[] arr = { 25, 39, 7, 91, 87 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int rid_index(int s_id) {
+	public int rid_index(String s_id) {
 		int[] arr = { 83, 78, 64, 59, 43 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int asl_index(int s_id) {
+	public int asl_index(String s_id) {
 		int[] arr = { 34, 6, 98, 43, 54 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int rsl_index(int s_id) {
+	public int rsl_index(String s_id) {
 		int[] arr = { 83, 35, 30, 65, 9 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int wsl_index(int s_id) {
+	public int wsl_index(String s_id) {
 		int[] arr = { 14, 69, 18, 81, 68 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int ail_index(int s_id) {
+	public int ail_index(String s_id) {
 		int[] arr = { 45, 59, 32, 88, 78 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int ril_index(int s_id) {
+	public int ril_index(String s_id) {
 		int[] arr = { 58, 49, 91, 64, 48 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int wil_index(int s_id) {
+	public int wil_index(String s_id) {
 		int[] arr = { 28, 2, 63, 33, 47 };
-		return generalInt(s_id, arr);
+		return generalInt(Integer.valueOf(s_id), arr);
 	}
 
-	public int age_index(int age) {
+	public int age_index(String age) {
 		int[] arr = { 8, 32, 29, 92, 12 };
-		return generalInt(age , arr);
+		return generalInt(Integer.valueOf(age) , arr);
 	}
 	
-	public int salary_index(int salary) {
+	public int salary_index(String ssalary) {
+		int salary=Integer.valueOf(ssalary);
 		int[] arr = { 63 , 42 , 39 , 54 , 73 , 19 , 47 };
 		int res = salary % 1000;
 		if (res < 150)
@@ -222,11 +223,11 @@ public class indexes {
 		return generalBinary_index(status, arr);
 	}
 	
-	public int doctor_index(int s_id) {
+	public int doctor_index(String s_id) {
 		return s_id_index(s_id);
 	}
 	
-	public int nurse_index(int s_id) {
+	public int nurse_index(String s_id) {
 		return s_id_index(s_id);
 	}
 	

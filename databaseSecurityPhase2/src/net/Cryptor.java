@@ -6,7 +6,11 @@ import javax.crypto.spec.SecretKeySpec;
 import org.apache.commons.codec.binary.Base64;
 
 public class Cryptor {
-    public static String encrypt(String key, String initVector, String value) {
+	public Cryptor() {
+		// TODO Auto-generated constructor stub
+		System.out.println(decrypt("fatemehfaezeh123" , "RandomInitVector", "nw1HcsjfiFQAelzVVZWiMhAS2Vbehq030s7gRyFs/+c="));
+	}
+    public String encrypt(String key, String initVector, String value) {
         try {
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
             SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
@@ -26,7 +30,7 @@ public class Cryptor {
         return null;
     }
 
-    public static String decrypt(String key, String initVector, String encrypted) {
+    public String decrypt(String key, String initVector, String encrypted) {
         try {
             IvParameterSpec iv = new IvParameterSpec(initVector.getBytes("UTF-8"));
             SecretKeySpec skeySpec = new SecretKeySpec(key.getBytes("UTF-8"), "AES");
@@ -44,11 +48,15 @@ public class Cryptor {
         return null;
     }
 
+//    public static void main(String[] args) {
+//        String key = "fatemehfaezeh123"; // 128 bit key
+//        String initVector = "RandomInitVector"; // 16 bytes IV
+//
+//        System.out.println(decrypt(key, initVector,
+//                encrypt(key, initVector, "Hello World")));
+//    }
+    
     public static void main(String[] args) {
-        String key = "fatemehfaezeh123"; // 128 bit key
-        String initVector = "RandomInitVector"; // 16 bytes IV
-
-        System.out.println(decrypt(key, initVector,
-                encrypt(key, initVector, "Hello World")));
-    }
+		new Cryptor();
+	}
 }
